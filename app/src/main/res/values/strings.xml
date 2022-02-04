@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Task Timer</string>
+    <string name="action_settings">Settings</string>
+    <string name="menutitle_addTask">Add Task</string>
+    <string name="menutitle_showDurations">Durations Report</string>
+    <string name="menutitle_settings">Settings</string>
+    <string name="menutitle_showAbout">About TaskTimer</string>
+    <string name="menutitle_generate">Generate data</string>
+    <string name="no_task_message">No task being timed</string>
+    <string name="edit_button_description">Button to edit a tasks details</string>
+    <string name="delete_button_description">Button to delete a task</string>
+    <string name="addedit_name_hint">Task name: required</string>
+    <string name="addedit_description_hint">Task description (optional)</string>
+    <string name="addedit_sort_hint">Order: sorts low to high</string>
+    <string name="addedit_save_text">Save</string>
+
+    <string name="instructions_heading">Instructions</string>
+    <string name="instructions">Use the add button (+) in the toolbar above to create new tasks.\n\nTasks with lower sort orders will be placed higher up the list.Tasks with the same sort order will be sorted alphabetically.\n\nTapping a task will start the timer for that task (and will stop the timer for any previous task that was being timed).\n\nEach task has Edit and Delete buttons if you want to change the details or remove the task.</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="deldiag_positive_caption">Delete</string>
+    <string name="deldiag_message">Deleting will also delete all timing data associated with task id %1$d: %2$s.</string>
+    <string name="cancelEditDiag_message">You have unsaved changes.  Do you want to abandon your changes, or continue editing?</string>
+    <string name="cancelEditDiag_positive_caption">Abandon changes</string>
+    <string name="cancelEditDiag_negative_caption">Continue editing</string>
+    <string name="about_copyright">Copyright \u00a9 2019 learnprogramming.academy</string>
+    <string name="about_weblink_v21">Instructions available at www.learnprogramming.academy</string>
+    <string name="about_weblink">Instructions available at</string>
+    <string name="about_url"><u>"https://www.learnprogramming.academy"</u></string>
+    <string name="about_email">For support, email tasktimer@learnprogramming.academy</string>
+    <string name="about_credits">Icon derived from <b>analog clock</b> at openclipart.org by <b>Anonymous</b></string>
+    <string name="about_url_error">No browser application found, cannot visit world-wide web</string>
+    <string name="timing_message">Currently timing %1$s</string>
+    <string name="td_text_name">Task name</string>
+    <string name="td_text_date">Date</string>
+    <string name="td_text_duration">Duration</string>
+    <string name="td_text_description">Description</string>
+    <string name="title_activity_durations_report">DurationsReport</string>
+    <string name="rm_title_filter_day">Show day</string>
+    <string name="rm_title_filter_week">Show week</string>
+    <string name="rm_title_filter_date">Set report date</string>
+    <string name="rm_title_delete">Delete old timings</string>
+    <string name="date_title_filter">Select date for report</string>
+    <string name="date_title_delete">Select the date to delete up to</string>
+    <string name="delete_timings_message">Are you sure you want to delete all timings before %1$s?</string>
+</resources>
