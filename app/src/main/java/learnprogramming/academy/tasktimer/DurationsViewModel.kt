@@ -6,16 +6,15 @@ import android.database.ContentObserver
 import android.database.Cursor
 import android.net.Uri
 import android.os.Handler
-import androidx.preference.PreferenceManager
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import androidx.preference.PreferenceManager
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.DisposableHandle
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import java.util.*
 
 /**
@@ -191,14 +190,17 @@ class DurationsViewModel (application: Application) : AndroidViewModel(applicati
         }
         Log.d(TAG, "order is $order")
 
-        viewModelScope.launch(Dispatchers.IO) {
-            val cursor = getApplication<Application>().contentResolver.query(
+        runBlocking {
+            launch {
+                val cursor = getApplication<Application>().contentResolver.query(
                     DurationsContract.CONTENT_URI,
                     null,
                     selection,
                     selectionArgs,
-                    order)
-            databaseCursor.postValue(cursor)
+                    order
+                )
+                databaseCursor.postValue(cursor!!)
+            }
         }
     }
 

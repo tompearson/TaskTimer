@@ -10,8 +10,6 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
 import kotlinx.android.synthetic.main.fragment_add_edit.*
 
 
@@ -104,7 +102,7 @@ class AddEditFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         Log.d(TAG, "onActivityCreated: starts")
-        super.onActivityCreated(savedInstanceState)
+//        super.onActivityCreated(savedInstanceState)// TODO depreciated remove
 
         if (activity is AppCompatActivity) {
             val actionBar = (activity as AppCompatActivity?)?.supportActionBar
