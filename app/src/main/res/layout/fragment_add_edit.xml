@@ -12,7 +12,8 @@
         android:ems="10"
         android:hint="@string/addedit_name_hint"
         android:inputType="textNoSuggestions"
-        android:maxLength="64"/>
+        android:maxLength="64"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/addedit_description"
@@ -21,7 +22,8 @@
         android:ems="10"
         android:hint="@string/addedit_description_hint"
         android:inputType="textMultiLine"
-        android:maxLength="256"/>
+        android:maxLength="256"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/addedit_sortorder"
@@ -30,7 +32,8 @@
         android:ems="10"
         android:hint="@string/addedit_sort_hint"
         android:inputType="number"
-        android:maxLength="9"/>
+        android:maxLength="9"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/addedit_save"
