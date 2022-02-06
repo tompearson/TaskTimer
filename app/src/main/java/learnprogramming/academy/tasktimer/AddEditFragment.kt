@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import kotlinx.android.synthetic.main.fragment_add_edit.*
+import learnprogramming.academy.tasktimer.databinding.FragmentAddEditBinding
 
 
 private const val TAG = "AddEditFragment"
@@ -30,7 +31,11 @@ private const val ARG_TASK = "task"
 class AddEditFragment : Fragment() {
     private var task: Task? = null
     private var listener: OnSaveClicked? = null
-//    private val viewModel by lazy { ViewModelProvider(activity!!).get(TaskTimerViewModel::class.java) }
+
+    //    private val viewModel by lazy { ViewModelProvider(activity!!).get(TaskTimerViewModel::class.java) }
+    private var _binding: FragmentAddEditBinding? = null
+    private val binding get() = _binding!!
+
     private val viewModel: TaskTimerViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,12 +44,14 @@ class AddEditFragment : Fragment() {
         task = arguments?.getParcelable(ARG_TASK)
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         Log.d(TAG, "onCreateView: starts")
-
+        _binding = FragmentAddEditBinding.inflate(inflater, container, false)
+        return binding.root
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add_edit, container, false)
+//        return inflater.inflate(R.layout.fragment_add_edit, container, false)
     }
 
     @SuppressLint("SetTextI18n")
@@ -156,11 +163,11 @@ class AddEditFragment : Fragment() {
          */
         @JvmStatic
         fun newInstance(task: Task?) =
-                AddEditFragment().apply {
-                    arguments = Bundle().apply {
-                        putParcelable(ARG_TASK, task)
-                    }
+            AddEditFragment().apply {
+                arguments = Bundle().apply {
+                    putParcelable(ARG_TASK, task)
                 }
+            }
     }
     // TODO: Delete all these functions before release.
 
